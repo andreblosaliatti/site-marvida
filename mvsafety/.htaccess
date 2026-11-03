@@ -1,0 +1,20 @@
+Options -Indexes
+DirectoryIndex index.php
+RewriteEngine On
+
+<FilesMatch "^(config\.php|config\.php\.example|README\.md)$">
+	Require all denied
+</FilesMatch>
+
+RewriteRule ^(inc|vendor)/ - [F,L]
+RewriteRule ^(header|footer)\.php$ - [F,L]
+RewriteRule ^robots\.txt$ robots.php [L]
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+RewriteRule ^contact-submit/?$ contact-submit.php [L,QSA]
+
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+RewriteRule ^(pt|en)/([a-zA-Z0-9-]+)/?$ index.php?lang=$1&slug=$2 [L,QSA]
+RewriteRule ^$ index.php [L,QSA]

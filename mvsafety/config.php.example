@@ -1,0 +1,16 @@
+<?php
+/**
+ * Copy this file to config.php and replace every value before publishing.
+ * Keep config.php private and never commit or share the real SMTP password.
+ */
+
+define( 'MVSAFETY_SITE_URL', 'https://your-domain.example' );
+define( 'MVSAFETY_PHONE', '' );
+define( 'MVSAFETY_PUBLIC_EMAIL', '' );
+
+define( 'MVSAFETY_CONTACT_EMAIL', '' );
+define( 'MVSAFETY_FROM_EMAIL', '' );
+define( 'MVSAFETY_SMTP_HOST', 'smtp.hostinger.com' );
+define( 'MVSAFETY_SMTP_PORT', 465 );
+define( 'MVSAFETY_SMTP_USERNAME', '' );
+define( 'MVSAFETY_SMTP_PASSWORD', '' );
